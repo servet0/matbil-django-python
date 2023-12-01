@@ -45,6 +45,112 @@ class Duyuru(models.Model):
     description = RichTextField(null=True, blank=True)
     date = models.DateTimeField(auto_now=True)
 
+class Bolum(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Amac(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Cikti(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Program(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='universite', null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Dersler(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Mezunlar(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Staj(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Kalite(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class Arastirma(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+    tittle2 = models.CharField(max_length=500, null=True, blank=True)
+    description2 = RichTextField(null=True, blank=True)
+    date2 = models.DateTimeField(auto_now=True)
+
+class İletisim(models.Model):
+    tittle = models.CharField(max_length=500, null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=21)
+    subject = models.CharField(max_length=300)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.subject
+    
+class Idare(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Analiz(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Bilgisayar(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Cebir(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Geometri(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Lojik(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Topoloji(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+class Uygulamali(models.Model):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    text = RichTextField(null=True, blank=True)
+    image = models.ImageField(upload_to='idare', null=True, blank=True)
+
+
 
 
 # Create your models here.

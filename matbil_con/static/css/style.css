@@ -112,6 +112,96 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       background: #136ad5;
       color: #ffffff; }
 
+/* Burası duyurunun detay kısmının css kodları*/
+
+/* Genel sayfa düzeni */
+.duyuru-container {
+  max-width: 800px; /* Sayfa genişliğini sınırla */
+  margin: 0 auto; /* Sayfayı ortala */
+  padding: 20px; /* Kenar boşlukları ekle */
+  background-color: #f5f5f5; /* Arka plan rengi */
+  border: 1px solid #ddd; /* Kenar çizgisi ekle */
+  border-radius: 8px; /* Köşe yuvarlama */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* Başlık stillemesi */
+.duyuru-title {
+  color: #333; /* Metin rengi */
+}
+
+/* Tarih stillemesi */
+.duyuru-date {
+  color: #777; /* Tarih rengi */
+}
+
+/* Açıklama stillemesi */
+.duyuru-description {
+  margin-top: 10px; /* Paragraf aralığı */
+  line-height: 1.5; /* Satır yüksekliği */
+  color: #555; /* Metin rengi */
+}
+
+/* Resim stillemesi */
+.duyuru-image {
+  max-width: 100%; /* Resmi, container genişliği kadar genişlet */
+  height: auto; /* Orantılı yükseklik */
+  margin-top: 20px; /* Resim ile diğer içerik arasındaki boşluk */
+  border-radius: 8px; /* Köşe yuvarlama */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* İletişim formu*/
+/* Form elementlerine genel stil */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+/* İnput ve textarea stil */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Gönder düğmesi stil */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FontAwesome ikon stil (i.fa) */
+i.fa {
+  margin-left: 5px;
+}
+
+/* Formun genel stil */
+.form-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Hata mesajları için stil (isteğe bağlı) */
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+
 .form-control, .custom-select {
   border: none;
   font-size: 16px;

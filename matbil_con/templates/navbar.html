@@ -39,48 +39,48 @@
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="index.html" class="logo menu-absolute m-0">{{navbars.logo}}<span class="text-primary">.</span></a>
+          <a href="{% url 'home' %}" class="logo menu-absolute m-0">{{navbars.logo}}<span class="text-primary">.</span></a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-            <li class="active"><a href="index.html">{{navbars.home}}</a></li>
+            <li class="active"><a href="{% url 'home' %}">{{navbars.home}}</a></li>
             <li class="has-children">
-              <a href="#">{{navbars.bolum}}</a>
+              <a href="">{{navbars.bolum}}</a>
               <ul class="dropdown">
-                <li><a href="elements.html">{{navbars.bolum_alt_1}}</a></li>
-                <li><a href="#">{{navbars.bolum_alt_2}}</a></li>
-                <li><a href="#">{{navbars.bolum_alt_3}}</a></li>
-                <li><a href="#">{{navbars.bolum_alt_4}}</a></li>
+                <li><a href="{% url 'bolum' %}">{{navbars.bolum_alt_1}}</a></li>
+                <li><a href="{% url 'idare' %}">{{navbars.bolum_alt_2}}</a></li>
+                <li><a href="{% url 'amac' %}">{{navbars.bolum_alt_3}}</a></li>
+                <li><a href="{% url 'cikti' %}">{{navbars.bolum_alt_4}}</a></li>
               </ul>
             </li>
             <li class="has-children">
                 <a href="#">{{navbars.akademik}}</a>
                 <ul class="dropdown">
-                  <li><a href="#">{{navbars.akademik_alt_1}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_2}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_3}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_4}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_5}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_6}}</a></li>
-                  <li><a href="#">{{navbars.akademik_alt_7}}</a></li>
+                  <li><a href="{% url 'analiz' %}">{{navbars.akademik_alt_1}}</a></li>
+                  <li><a href="{% url 'bilgisayar' %}">{{navbars.akademik_alt_2}}</a></li>
+                  <li><a href="{% url 'cebir' %}">{{navbars.akademik_alt_3}}</a></li>
+                  <li><a href="{% url 'geometri' %}">{{navbars.akademik_alt_4}}</a></li>
+                  <li><a href="{% url 'lojik' %}">{{navbars.akademik_alt_5}}</a></li>
+                  <li><a href="{% url 'topoloji' %}">{{navbars.akademik_alt_6}}</a></li>
+                  <li><a href="{% url 'uygulamali' %}">{{navbars.akademik_alt_7}}</a></li>
                 </ul>
             </li>
-            <li><a href="staff.html">{{navbars.program}}</a></li>
-            <li><a href="news.html">{{navbars.ders}}</a></li>
-            <li><a href="gallery.html">{{navbars.mezun}}</a></li>
-            <li><a href="about.html">{{navbars.staj}}</a></li>
-            <li><a href="contact.html">{{navbars.kalite}}</a></li>
+            <li><a href="{% url 'program' %}">{{navbars.program}}</a></li>
+            <li><a href="{% url 'dersler' %}">{{navbars.ders}}</a></li>
+            <li><a href="{% url 'mezunlar' %}">{{navbars.mezun}}</a></li>
+            <li><a href="{% url 'staj' %}">{{navbars.staj}}</a></li>
+            <li><a href="{% url 'kalite' %}">{{navbars.kalite}}</a></li>
             <li class="has-children">
                 <a href="#">{{navbars.arastirma}}</a>
                 <ul class="dropdown">
-                  <li><a href="#">{{navbars.arastirma_alt_1}}</a></li>
-                  <li><a href="#">{{navbars.arastirma_alt_2}}</a></li>
+                  <li><a href="{% url 'yayin' %}">{{navbars.arastirma_alt_1}}</a></li>
+                  <li><a href="{% url 'proje' %}">{{navbars.arastirma_alt_2}}</a></li>
                 </ul>
             </li>
             <li class="has-children">
                 <a href="#">{{navbars.nokta}}</a>
                 <ul class="dropdown">
                   {% for navbar2 in navbars2  %}
-                    <li><a href="#">{{navbar2.name}}</a></li>
+                    <li><a href="{% url 'iletisim' %}">{{navbar2.name}}</a></li>
                   {% endfor %}
                 </ul>
             </li>
