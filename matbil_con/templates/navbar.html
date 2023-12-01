@@ -1,0 +1,94 @@
+{% load static %}
+
+<div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  
+  <nav class="site-nav mb-5">
+    <div class="pb-2 top-bar mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-lg-9">
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have a questions?</span></a> 
+            <a href="#" class="small mr-3"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block">10 20 123 456</span></a> 
+            <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@mydomain.com</span></a> 
+          </div>
+
+          <div class="col-6 col-lg-3 text-right">
+            <a href="login.html" class="small mr-3">
+              <span class="icon-lock"></span>
+              Log In
+            </a>
+            <a href="register.html" class="small">
+              <span class="icon-person"></span>
+              Register
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="sticky-nav js-sticky-header">
+      <div class="container position-relative">
+        <div class="site-navigation text-center">
+          <a href="index.html" class="logo menu-absolute m-0">{{navbars.logo}}<span class="text-primary">.</span></a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
+            <li class="active"><a href="index.html">{{navbars.home}}</a></li>
+            <li class="has-children">
+              <a href="#">{{navbars.bolum}}</a>
+              <ul class="dropdown">
+                <li><a href="elements.html">{{navbars.bolum_alt_1}}</a></li>
+                <li><a href="#">{{navbars.bolum_alt_2}}</a></li>
+                <li><a href="#">{{navbars.bolum_alt_3}}</a></li>
+                <li><a href="#">{{navbars.bolum_alt_4}}</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+                <a href="#">{{navbars.akademik}}</a>
+                <ul class="dropdown">
+                  <li><a href="#">{{navbars.akademik_alt_1}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_2}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_3}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_4}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_5}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_6}}</a></li>
+                  <li><a href="#">{{navbars.akademik_alt_7}}</a></li>
+                </ul>
+            </li>
+            <li><a href="staff.html">{{navbars.program}}</a></li>
+            <li><a href="news.html">{{navbars.ders}}</a></li>
+            <li><a href="gallery.html">{{navbars.mezun}}</a></li>
+            <li><a href="about.html">{{navbars.staj}}</a></li>
+            <li><a href="contact.html">{{navbars.kalite}}</a></li>
+            <li class="has-children">
+                <a href="#">{{navbars.arastirma}}</a>
+                <ul class="dropdown">
+                  <li><a href="#">{{navbars.arastirma_alt_1}}</a></li>
+                  <li><a href="#">{{navbars.arastirma_alt_2}}</a></li>
+                </ul>
+            </li>
+            <li class="has-children">
+                <a href="#">{{navbars.nokta}}</a>
+                <ul class="dropdown">
+                  {% for navbar2 in navbars2  %}
+                    <li><a href="#">{{navbar2.name}}</a></li>
+                  {% endfor %}
+                </ul>
+            </li>
+          </ul>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </nav>
