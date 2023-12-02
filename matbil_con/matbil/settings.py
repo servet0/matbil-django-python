@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+from .local_settings import *
 import os
 from pathlib import Path
 
@@ -74,10 +75,7 @@ WSGI_APPLICATION = 'matbil.wsgi.application'
 
 # Diğer Django ayarları...
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
+
 
 
 # Password validation
