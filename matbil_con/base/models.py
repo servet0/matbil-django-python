@@ -1,5 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from datetime import datetime
+
 
 class Navbar(models.Model):
     logo = models.CharField(max_length=500, null=True, blank=True)
@@ -150,7 +152,10 @@ class Uygulamali(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-
+class Footer(models.Model):
+    date = models.IntegerField(default=datetime.now().year)
+    text = RichTextField(null=True, blank=True)
+    text2 = RichTextField(null=True, blank=True)
 
 
 # Create your models here.
