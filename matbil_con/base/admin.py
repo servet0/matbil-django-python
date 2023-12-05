@@ -1,9 +1,24 @@
 from django.contrib import admin
 from .models import Navbar, Navbar2, Home, Duyuru, Bolum, Amac, Cikti, Program, Dersler, Mezunlar, Staj, Kalite, Arastirma, İletisim, ContactMessage, Idare, Analiz, Bilgisayar, Cebir, Geometri, Lojik, Topoloji, Uygulamali, Footer
 
-admin.site.register(Navbar)
+
+
+class NavbarAdmin(admin.ModelAdmin):
+    list_display = ['logo', 'home', 'bolum', 'akademik', 'program', 'arastirma', 'nokta']
+    search_fields = ['logo', 'home', 'bolum', 'akademik', 'program', 'arastirma', 'nokta']
+    fields = ['logo', 'home', 'bolum', 'akademik', 'program', 'arastirma', 'nokta']
+
+
+class HomeAdmin(admin.ModelAdmin):
+    list_display = ['bolum_ismi', 'duyuru']
+    search_fields = ['bolum_ismi', 'duyuru']
+    fields = ['bolum_ismi', 'duyuru']
+
+# Diğer modeller için de benzer şekilde devam edebilirsiniz.
+
+admin.site.register(Navbar, NavbarAdmin)
 admin.site.register(Navbar2)
-admin.site.register(Home)
+admin.site.register(Home, HomeAdmin)
 admin.site.register(Duyuru)
 admin.site.register(Bolum)
 admin.site.register(Amac)
@@ -25,4 +40,3 @@ admin.site.register(Lojik)
 admin.site.register(Topoloji)
 admin.site.register(Uygulamali)
 admin.site.register(Footer)
-# Register your models here.
