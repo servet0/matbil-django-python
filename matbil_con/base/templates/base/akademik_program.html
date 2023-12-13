@@ -28,16 +28,17 @@
 
   <!--Buraya duyurunun detayları gelicek-->
 
-<div class="duyuru-container">
-    <h1 class="duyuru-title">{{programs.tittle}}</h1>    
+  <div class="duyuru-container">
+    <h1 class="duyuru-title">{{programs.tittle}}</h1>
     <hr>
-    <p class="duyuru-description">{{programs.description | safe}}</p>
+        <p class="duyuru-description">{{programs.description | safe}}</p>
     {% if programs.image %}
-    <img class="duyuru-image" src="{{programs.image.url}}" alt="Duyuru Resmi">
+        <img class="duyuru-image" src="{{programs.image.url}}" alt="Duyuru Resmi">
     {% endif %}
     <br>
     <span class="duyuru-date">Son güncelleme tarihi: {{programs.date}}</span>
 </div>
+
 
 
   {% endblock %}

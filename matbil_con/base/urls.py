@@ -24,4 +24,7 @@ urlpatterns = [
     path('matematiğin-temelleri-ve-lojik/', views.lojik, name = 'lojik'),
     path('topoloji/', views.topoloji, name = 'topoloji'),
     path('uygulamali-matematik/', views.uygulamali, name = 'uygulamali'),
+    path('tr/', views.home, name = 'tr'),
+    path('en/', views.home, name = 'en'),
+   
 ]

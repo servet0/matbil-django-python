@@ -1,36 +1,59 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from datetime import datetime
+from django.utils.translation import gettext_lazy as _
 
 
 class Navbar(models.Model):
     logo = models.CharField(max_length=500, null=True, blank=True)
     home = models.CharField(max_length=500, null=True, blank=True)
+    home_eng = models.CharField(max_length=500, null=True, blank=True)
     
     bolum = models.CharField(max_length=500, null=True, blank=True)
+    bolum_eng = models.CharField(max_length=500, null=True, blank=True)
     bolum_alt_1 = models.CharField(max_length=500, null=True, blank=True)
+    bolum_alt_1_eng = models.CharField(max_length=500, null=True, blank=True)
     bolum_alt_2 = models.CharField(max_length=500, null=True, blank=True)
+    bolum_alt_2_eng = models.CharField(max_length=500, null=True, blank=True)
     bolum_alt_3 = models.CharField(max_length=500, null=True, blank=True)
+    bolum_alt_3_eng = models.CharField(max_length=500, null=True, blank=True)
     bolum_alt_4 = models.CharField(max_length=500, null=True, blank=True)
+    bolum_alt_4_eng = models.CharField(max_length=500, null=True, blank=True)
     
     akademik = models.CharField(max_length=500, null=True, blank=True)
+    akademik_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_1 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_1_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_2 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_2_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_3 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_3_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_4 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_4_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_5 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_5_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_6 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_6_eng = models.CharField(max_length=500, null=True, blank=True)
     akademik_alt_7 = models.CharField(max_length=500, null=True, blank=True)
+    akademik_alt_7_eng = models.CharField(max_length=500, null=True, blank=True)
 
     program = models.CharField(max_length=500, null=True, blank=True)
+    program_eng = models.CharField(max_length=500, null=True, blank=True)
     ders = models.CharField(max_length=500, null=True, blank=True)
+    ders_eng = models.CharField(max_length=500, null=True, blank=True)
     mezun = models.CharField(max_length=500, null=True, blank=True)
+    mezun_eng = models.CharField(max_length=500, null=True, blank=True)
     staj = models.CharField(max_length=500, null=True, blank=True)
+    staj_eng = models.CharField(max_length=500, null=True, blank=True)
     kalite = models.CharField(max_length=500, null=True, blank=True)
+    kalite_eng = models.CharField(max_length=500, null=True, blank=True)
 
     arastirma = models.CharField(max_length=500, null=True, blank=True)
+    arastirma_eng = models.CharField(max_length=500, null=True, blank=True)
     arastirma_alt_1 = models.CharField(max_length=500, null=True, blank=True)
+    arastirma_alt_1_eng = models.CharField(max_length=500, null=True, blank=True)
     arastirma_alt_2 = models.CharField(max_length=500, null=True, blank=True)
+    arastirma_alt_2_eng = models.CharField(max_length=500, null=True, blank=True)
 
     nokta = models.CharField(max_length=500, null=True, blank=True)
 
@@ -41,6 +64,7 @@ class Navbar(models.Model):
 
 class Navbar2(models.Model):
     name = models.CharField(max_length=500, null=True, blank=True)
+    name_eng = models.CharField(max_length=500, null=True, blank=True)
     date = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -52,7 +76,9 @@ class Navbar2(models.Model):
 
 class Home(models.Model):
     bolum_ismi = models.CharField(max_length=500, null=True, blank=True)
+    bolum_ismi_eng = models.CharField(max_length=500, null=True, blank=True)
     duyuru = models.CharField(max_length=500, null=True, blank=True)
+    duyuru_eng = models.CharField(max_length=500, null=True, blank=True)
 
     class Meta:
         verbose_name = ("Home")
@@ -211,11 +237,10 @@ class ContactMessage(models.Model):
     
 class Idare(models.Model):
     name = models.CharField(max_length=500, null=True, blank=True)
+    tittle_admin = models.CharField(max_length=500, null=True, blank=True)
     text = RichTextField(null=True, blank=True)
+    text_en = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
-
-    def __str__(self):
-        return self.name
 
     class Meta:
         verbose_name = ("İdare")
@@ -226,8 +251,7 @@ class Analiz(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Analiz ve Fonksiyonlar Teorisi A.B.D")
@@ -238,8 +262,7 @@ class Bilgisayar(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Bilgisayar Bilimleri A.B.D.")
@@ -250,8 +273,7 @@ class Cebir(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Cebir ve Sayılar Teorisi A.B.D.")
@@ -262,8 +284,7 @@ class Geometri(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Geometri A.B.D.")
@@ -274,8 +295,7 @@ class Lojik(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Matematiğin Temelleri ve Lojik A.B.D.")
@@ -286,8 +306,7 @@ class Topoloji(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Topoloji  A.B.D.")
@@ -298,8 +317,7 @@ class Uygulamali(models.Model):
     text = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='idare', null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    
 
     class Meta:
         verbose_name = ("Uygulamalı Matematik  A.B.D.")

@@ -23,7 +23,7 @@ def duyuru_detay(request, id):
     navbars = Navbar.objects.first()
     navbars2 = Navbar2.objects.all().order_by()
     homes = Home.objects.first()
-    duyuru_d = Duyuru.objects.get( tittle=id)
+    duyuru_d = Duyuru.objects.get(tittle=id)
     footers = Footer.objects.first()
 
     context = {'navbars':navbars, 'navbars2': navbars2, 'homes':homes, 'duyuru_d': duyuru_d, 'footers': footers}

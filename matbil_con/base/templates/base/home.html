@@ -13,7 +13,12 @@
           <div class="row justify-content-center ">
 
             <div class="col-lg-6 text-center ">
+              {% if 'tr' in request.path %}
               <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">{{homes.bolum_ismi}}</h1>
+              {% endif %}
+              {% if 'en' in request.path %}
+              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">{{homes.bolum_ismi_eng}}</h1>
+              {% endif %}
             </div>
 
 
@@ -30,7 +35,12 @@
   <!--Buraya duyurular kısmı gelecek-->
   <div class="untree_co-section bg-light">
     <div class="container">
+      {% if 'tr' in request.path %}
       <h3>{{homes.duyuru}}</h3>
+      {% endif %}
+      {% if 'en' in request.path %}
+      <h3>{{homes.duyuru_eng}}</h3>
+      {% endif %}
       <hr>
       <div class="row align-items-stretch">
         {% for duyuru in page_obj %}
