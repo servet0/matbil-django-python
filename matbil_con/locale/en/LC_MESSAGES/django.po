@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-28 01:17+0300\n"
+"PO-Revision-Date: 2023-12-28 01:32+0000\n"
+"Last-Translator:   <admin@mail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\matbil\settings.py:114
+msgid "Turkish"
+msgstr ""
+
+#: .\matbil\settings.py:115
+msgid "English"
+msgstr ""
+
+#: .\templates\navbar.html:24
+#, python-format
+msgid "%(navbars.home)s"
+msgstr "Home"
+
+#: .\templates\navbar.html:28
+#, python-format
+msgid "%(navbars.bolum)s "
+msgstr "Depart"
+
+#: .\templates\navbar.html:33
+#, python-format
+msgid "%(navbars.bolum_alt_1)s"
+msgstr "About"
+
+#: .\templates\navbar.html:37
+#, python-format
+msgid "%(navbars.bolum_alt_2)s"
+msgstr "Manager"
+
+#: .\templates\navbar.html:41
+#, python-format
+msgid "%(navbars.bolum_alt_3)s "
+msgstr "Teaching Objectives"
+
+#: .\templates\navbar.html:45
+#, python-format
+msgid "%(navbars.bolum_alt_4)s"
+msgstr "Program Outputs"
+
+#: .\templates\navbar.html:51
+#, python-format
+msgid "%(navbars.akademik)s "
+msgstr "Academic Staff"
+
+#: .\templates\navbar.html:55
+#, python-format
+msgid "%(navbars.akademik_alt_1)s"
+msgstr "Academic Program"
+
+#: .\templates\navbar.html:59
+#, python-format
+msgid "%(navbars.akademik_alt_2)s"
+msgstr ""
+
+#: .\templates\navbar.html:63
+#, python-format
+msgid "%(navbars.akademik_alt_3)s"
+msgstr ""
+
+#: .\templates\navbar.html:67
+#, python-format
+msgid "%(navbars.akademik_alt_4)s"
+msgstr ""
+
+#: .\templates\navbar.html:71
+#, python-format
+msgid "%(navbars.akademik_alt_5)s "
+msgstr ""
+
+#: .\templates\navbar.html:75
+#, python-format
+msgid "%(navbars.akademik_alt_6)s "
+msgstr ""
+
+#: .\templates\navbar.html:79
+#, python-format
+msgid "%(navbars.akademik_alt_7)s"
+msgstr ""
+
+#: .\templates\navbar.html:85
+#, python-format
+msgid "%(navbars.program)s"
+msgstr "Academic Program"
+
+#: .\templates\navbar.html:89
+#, python-format
+msgid "%(navbars.ders)s"
+msgstr "Lessons Contents"
+
+#: .\templates\navbar.html:93
+#, python-format
+msgid "%(navbars.mezun)s"
+msgstr "Graduates"
+
+#: .\templates\navbar.html:97
+#, python-format
+msgid "%(navbars.staj)s"
+msgstr "internship"
+
+#: .\templates\navbar.html:101
+#, python-format
+msgid "%(navbars.kalite)s"
+msgstr "Quality Commission"
+
+#: .\templates\navbar.html:105
+#, python-format
+msgid "%(navbars.arastirma)s"
+msgstr "Research"
+
+#: .\templates\navbar.html:109
+#, python-format
+msgid "%(navbars.arastirma_alt_1)s"
+msgstr "Publications"
+
+#: .\templates\navbar.html:113
+#, python-format
+msgid "%(navbars.arastirma_alt_2)s"
+msgstr "Projects"
+
+#: .\templates\navbar.html:120
+#, python-format
+msgid "%(navbars.nokta)s"
+msgstr ". . ."
+
+#: .\templates\navbar.html:126
+#, python-format
+msgid "%(navbar2.name)s"
+msgstr "Contact"

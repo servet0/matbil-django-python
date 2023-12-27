@@ -20,137 +20,133 @@
           <a href="{% url 'home' %}" class="logo menu-absolute m-0">{{navbars.logo}}<span class="text-primary">.</span></a>
           &nbsp;
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-            {% if 'tr' in request.path %}
-            <li class="active"><a href="{% url 'home' %}">{{navbars.home}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li class="active"><a href="{% url 'home' %}">{{navbars.home_eng}}</a></li>
-            {% endif %}
+            
+            <li class="active"><a href="{% url 'home' %}">{% blocktrans %}{{navbars.home}}{% endblocktrans %}</a></li>
+            
             <li class="has-children">
-              {% if 'tr' in request.path %}
-	              <a href="#">{{navbars.bolum}}</a>
-	              {% endif %}
-	              {% if 'en' in request.path %}
-	              <a href="#">{{navbars.bolum_eng}}</a>
-	              {% endif %}
+              
+	              <a href="#">{% blocktrans %}{{navbars.bolum}} {% endblocktrans %}</a>
+	             
               
               <ul class="dropdown">
-                {% if 'tr' in request.path %}
-                <li><a href="{% url 'bolum' %}">{{navbars.bolum_alt_1}}</a></li>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <li><a href="{% url 'bolum' %}">{{navbars.bolum_alt_1_eng}}</a></li>
-                {% endif %}
-                {% if 'tr' in request.path %}
-                <li><a href="{% url 'idare' %}">{{navbars.bolum_alt_2}}</a></li>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <li><a href="{% url 'idare' %}">{{navbars.bolum_alt_2_eng}}</a></li>
-                {% endif %}
-                {% if 'tr' in request.path %}
-                <li><a href="{% url 'amac' %}">{{navbars.bolum_alt_3}}</a></li>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <li><a href="{% url 'amac' %}">{{navbars.bolum_alt_3_eng}}</a></li>
-                {% endif %}
-                {% if 'tr' in request.path %}
-                <li><a href="{% url 'cikti' %}">{{navbars.bolum_alt_4}}</a></li>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <li><a href="{% url 'cikti' %}">{{navbars.bolum_alt_4_eng}}</a></li>
-                {% endif %}
+                
+                <li><a href="{% url 'bolum' %}">{% blocktrans %}{{navbars.bolum_alt_1}}{% endblocktrans %}</a></li>
+                
+
+                
+                <li><a href="{% url 'idare' %}">{% blocktrans %}{{navbars.bolum_alt_2}}{% endblocktrans %}</a></li>
+                
+
+                
+                <li><a href="{% url 'amac' %}">{% blocktrans %}{{navbars.bolum_alt_3}} {% endblocktrans %}</a></li>
+               
+
+                
+                <li><a href="{% url 'cikti' %}">{% blocktrans %}{{navbars.bolum_alt_4}}{% endblocktrans %}</a></li>
+                
               </ul>
             </li>
             <li class="has-children">
-                {% if 'tr' in request.path %}
-                <a href="#">{{navbars.akademik}}</a>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <a href="#">{{navbars.akademik_eng}}</a>
-                {% endif %}
+              
+                <a href="#">{% blocktrans %}{{navbars.akademik}} {% endblocktrans %}</a>
+               
                 <ul class="dropdown">
-                  <li><a href="{% url 'analiz' %}">{{navbars.akademik_alt_1}}</a></li>
-                  <li><a href="{% url 'bilgisayar' %}">{{navbars.akademik_alt_2}}</a></li>
-                  <li><a href="{% url 'cebir' %}">{{navbars.akademik_alt_3}}</a></li>
-                  <li><a href="{% url 'geometri' %}">{{navbars.akademik_alt_4}}</a></li>
-                  <li><a href="{% url 'lojik' %}">{{navbars.akademik_alt_5}}</a></li>
-                  <li><a href="{% url 'topoloji' %}">{{navbars.akademik_alt_6}}</a></li>
-                  <li><a href="{% url 'uygulamali' %}">{{navbars.akademik_alt_7}}</a></li>
+                  
+                  <li><a href="{% url 'analiz' %}">{% blocktrans %}{{navbars.akademik_alt_1}}{% endblocktrans %}</a></li>
+                  
+
+                  
+                  <li><a href="{% url 'bilgisayar' %}">{% blocktrans %}{{navbars.akademik_alt_2}}{% endblocktrans %}</a></li>
+                  
+
+                  
+                  <li><a href="{% url 'cebir' %}">{% blocktrans %}{{navbars.akademik_alt_3}}{% endblocktrans %}</a></li>
+                  
+
+                 
+                  <li><a href="{% url 'geometri' %}"> {% blocktrans %}{{navbars.akademik_alt_4}}{% endblocktrans %}</a></li>
+                  
+
+                  
+                  <li><a href="{% url 'lojik' %}">{% blocktrans %}{{navbars.akademik_alt_5}} {% endblocktrans %}</a></li>
+                 
+
+                  
+                  <li><a href="{% url 'topoloji' %}">{% blocktrans %}{{navbars.akademik_alt_6}} {% endblocktrans %}</a></li>
+                 
+
+                  
+                  <li><a href="{% url 'uygulamali' %}">{% blocktrans %}{{navbars.akademik_alt_7}}{% endblocktrans %}</a></li>
+                  
                 </ul>
             </li>
-            {% if 'tr' in request.path %}
-            <li><a href="{% url 'program' %}">{{navbars.program}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li><a href="{% url 'program' %}">{{navbars.program_eng}}</a></li>
-            {% endif %}
-            {% if 'tr' in request.path %}
-            <li><a href="{% url 'dersler' %}">{{navbars.ders}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li><a href="{% url 'dersler' %}">{{navbars.ders_eng}}</a></li>
-            {% endif %}
-            {% if 'tr' in request.path %}
-            <li><a href="{% url 'mezunlar' %}">{{navbars.mezun}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li><a href="{% url 'mezunlar' %}">{{navbars.mezun_eng}}</a></li>
-            {% endif %}
-            {% if 'tr' in request.path %}
-            <li><a href="{% url 'staj' %}">{{navbars.staj}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li><a href="{% url 'staj' %}">{{navbars.staj_eng}}</a></li>
-            {% endif %}
-            {% if 'tr' in request.path %}
-            <li><a href="{% url 'kalite' %}">{{navbars.kalite}}</a></li>
-            {% endif %}
-            {% if 'en' in request.path %}
-            <li><a href="{% url 'kalite' %}">{{navbars.kalite_eng}}</a></li>
-            {% endif %}
+          
+            
+            <li><a href="{% url 'program' %}">{% blocktrans %}{{navbars.program}}{% endblocktrans %}</a></li>
+            
+
+            
+            <li><a href="{% url 'dersler' %}">{% blocktrans %}{{navbars.ders}}{% endblocktrans %}</a></li>
+            
+
+            
+            <li><a href="{% url 'mezunlar' %}">{% blocktrans %}{{navbars.mezun}}{% endblocktrans %}</a></li>
+            
+
+            
+            <li><a href="{% url 'staj' %}">{% blocktrans %}{{navbars.staj}}{% endblocktrans %}</a></li>
+            
+
+            
+            <li><a href="{% url 'kalite' %}">{% blocktrans %}{{navbars.kalite}}{% endblocktrans %}</a></li>
+            
             <li class="has-children">
-              {% if 'tr' in request.path %}
-                <a href="#">{{navbars.arastirma}}</a>
-                {% endif %}
-                {% if 'en' in request.path %}
-                <a href="#">{{navbars.arastirma_eng}}</a>
-                {% endif %}
+              
+                <a href="#">{% blocktrans %}{{navbars.arastirma}}{% endblocktrans %}</a>
+                
                 <ul class="dropdown">
-                  {% if 'tr' in request.path %}
-                  <li><a href="{% url 'yayin' %}">{{navbars.arastirma_alt_1}}</a></li>
-                  {% endif %}
-                  {% if 'en' in request.path %}
-                  <li><a href="{% url 'yayin' %}">{{navbars.arastirma_alt_1_eng}}</a></li>
-                  {% endif %}
-                  {% if 'tr' in request.path %}
-                  <li><a href="{% url 'proje' %}">{{navbars.arastirma_alt_2}}</a></li>
-                  {% endif %}
-                  {% if 'en' in request.path %}
-                  <li><a href="{% url 'proje' %}">{{navbars.arastirma_alt_2_eng}}</a></li>
-                  {% endif %}
+                  
+                  <li><a href="{% url 'yayin' %}">{% blocktrans %}{{navbars.arastirma_alt_1}}{% endblocktrans %}</a></li>
+                  
+                  
+                  
+                  <li><a href="{% url 'proje' %}">{% blocktrans %}{{navbars.arastirma_alt_2}}{% endblocktrans %}</a></li>
+                  
+                 
                 </ul>
             </li>
             <li class="has-children">
-                <a href="#">{{navbars.nokta}}</a>
+              
+                <a href="#">{% blocktrans %}{{navbars.nokta}}{% endblocktrans %}</a>
+                
                 <ul class="dropdown">
                   {% for navbar2 in navbars2  %}
-                  {% if 'tr' in request.path %}
-                    <li><a href="{% url 'iletisim' %}">{{navbar2.name}}</a></li>
-                    {% endif %}
+                  <!--{% if 'tr' in request.path %}-->
+                  
+                    <li><a href="{% url 'iletisim' %}">{% blocktrans %}{{navbar2.name}}{% endblocktrans %}</a></li>
+                    
+                    <!--{% endif %}
                     {% if 'en' in request.path %}
                     <li><a href="{% url 'iletisim' %}">{{navbar2.name_eng}}</a></li>
-                    {% endif %}
+                    {% endif %}-->
                   {% endfor %}
                 </ul>
             </li>
-            <li class="has-children">
-              <li>
-                <a href="{% url 'en' %}">English</a>
-              </li>
-              <li>
-                <a href="{% url 'tr' %}">Türkçe</a>
-              </li>
-          </li>
+            
+            <li class="has-children" >
+              <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="language" onchange="this.form.submit();">
+                   {% get_current_language as LANGUAGE_CODE %}
+                   {% get_available_languages as LANGUAGES %}
+                   {% get_language_info_list for LANGUAGES as languages %}
+                   {% for language in languages %}
+                     <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                         {{ language.name_local }} ({{ language.code }})
+                     </option>
+                   {% endfor %}
+                </select>
+            </form>
+            </li>
           
           </ul>
 
