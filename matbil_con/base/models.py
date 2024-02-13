@@ -79,6 +79,7 @@ class Home(models.Model):
     bolum_ismi_eng = models.CharField(max_length=500, null=True, blank=True)
     duyuru = models.CharField(max_length=500, null=True, blank=True)
     duyuru_eng = models.CharField(max_length=500, null=True, blank=True)
+    image = models.ImageField(upload_to='home', null=True, blank=True)
 
     class Meta:
         verbose_name = ("Home")
